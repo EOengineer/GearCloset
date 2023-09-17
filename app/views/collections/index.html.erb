@@ -1,1 +1,24 @@
-<div>Collections Index</div>
+<div>
+
+  <h2>Collections Index</h2>
+
+  <div>
+    <% @collections.each do |collection| %>
+      <div class="row">
+        <div class="col">
+          <%= collection.name %>
+        </div>
+        <div class="col">
+          <%= link_to "Show", collection %>
+        </div>
+        <div class="col">
+          <%= link_to "Edit", edit_collection_path(collection) %>
+        </div>
+        <div class="col">
+          <%= link_to "Delete", collection, method: :delete, data: { confirm: "Are you sure?" } %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
