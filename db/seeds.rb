@@ -15,6 +15,10 @@ u.save!
 puts "Created User: #{u.email}"
 
 # Create Collections
-c = Collection.create!(name: 'Test Collection', description: 'This is a test collection.', user: u)
+guitar_collection = Collection.create!(name: 'Guitars', description: 'A collection of guitars.', user: u)
 
-puts "Created Collection: #{c.name}"
+puts "Created Collection: #{guitar_collection.name}"
+
+amp_collection = Collection.create!(name: 'Amplifiers', description: 'A collection of amplifiers.', user: u)
+
+puts "Created Collection: #{amp_collection.name}"
